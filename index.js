@@ -40,6 +40,11 @@ async function main() {
         });
 
         console.log(originalPosition);
+        
+        if (argv.hasOwnProperty('contents')) {
+            const contents = consumer.sourceContentFor(originalPosition.source);
+            console.log(contents);
+        }
     } catch (err) {
         console.log(err);
         throw err;
