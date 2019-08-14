@@ -17,15 +17,15 @@ function readFile(file) {
 
 async function main() {
     if (!argv.hasOwnProperty('file')) {
-        throw Error('Please include the sourcemap file to search, --file=./my-sourcemap.js.map')
+        throw Error('Please provide the sourcemap file to search, --file=./my-sourcemap.js.map')
     }
 
     if (!argv.hasOwnProperty('line')) {
-        throw Error('Please include the line number you want to search, --line=1')
+        throw Error('Please provide the line number you want to search, --line=1')
     }
 
     if (!argv.hasOwnProperty('column')) {
-        throw Error('Please include the column number you want to search, --column=1')
+        throw Error('Please provide the column number you want to search, --column=1')
     }
 
     try {
